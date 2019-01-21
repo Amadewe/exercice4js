@@ -12,17 +12,12 @@
           <button  name="submit" id="submit" onclick="myFunction()">Valider</button>
       </form>
         <script>
-var myElement = document.getElementById("lastname");
-alert(lastname[id]);
-var myElement = document.getElementById("firstname");
-alert(firstname[id]);
-var myElement = document.getElementById("city");
-alert(city[id]);
-
 function myFunction() {
-  document.getElementById("submit");
+var lastname = document.getElementById("lastname").value;
+var firstname = document.getElementById("firstname").value;
+var city = document.getElementById("city").value;
+alert( lastname + firstname + city);
 }
-
         </script>
   </body>
 </html>
