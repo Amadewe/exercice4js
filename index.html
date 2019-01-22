@@ -9,17 +9,32 @@
           <label for="lastname">Nom : </label><input type="text" name="lastname" id="lastname"/>
           <label for="firstname">Prénom : </label><input type="text" name="firstname" id="firstname"/>
           <label for="city">Ville : </label><input type="text" name="city" id="city"/>
-          <button  name="submit" id="submit" onclick="myFunction()">Valider</button>
+          <button  name="submit" id="submit" onclick="displayInformations()">Valider</button>
       </form>
         <script>
-function myFunction() {
-var lastname = document.getElementById("lastname").value;
-var firstname = document.getElementById("firstname").value;
-var city = document.getElementById("city").value;
+      // function permet de créer une fonction, ensuite nom de la fonction içi displayInformation, obligatoirement on met des () et dans ses parenthèses on pourra mettre
+      // ex: function pouete (lastname, firstname){
+      //   var concat = lastname + firstname;
+      //   return concat;
+      // }
+      // ça va renvoyer lastnamefirstname
+      // document.getElementById() est une fonction
+      // .value permet de récuperer les données tapées dans le formulaire
 
+
+//on crée une fonction displayInformations que l'on va déclencher au clic pour récuperer et afficher la valeur de nos "imputs"
+function displayInformations() {
+  // dans le document html (document) tu recupères l'element grace à son id => (getElementById) (ex: lastname)
+// ici on ne recupère que la valeur de l'element grace à .value
+// On stocke la valeur récuperé dans une variable  (var)
+// evenement = içi onclick
+// un evenement appel à une fonction
+var lastname = document.getElementById('lastname').value;
+var firstname = document.getElementById('firstname').value;
+var city = document.getElementById('city').value;
 
 if (isNaN(lastname)==true && isNaN(firstname)==true && isNaN(city)==true) {
-    alert('Nom :'+lastname+'\nPrénom :'+firstname+'\nVille :'+city);
+    alert('Nom : ' + lastname + '\nPrénom : ' + firstname + '\nVille : ' + city);
 } else {
     alert('Merci de remplir tous les champs svp');
 }
